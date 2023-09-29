@@ -41,6 +41,8 @@ def filter_by_antutu_score():
     plt.xticks(rotation=90)
     plt.xlabel("Name")
     plt.ylabel("Performance")
+    fig.patch.set_facecolor('none')  # Set the figure background to transparent
+    ax.set_facecolor('none')
     st.pyplot(fig)
 
 # Function to compare phones by Battery Capacity
