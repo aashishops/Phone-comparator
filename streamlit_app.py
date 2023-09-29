@@ -30,35 +30,35 @@ st.sidebar.header("Phone Comparator")
 st.title("Phone Comparator App")
 
 # Function to compare phones by Antutu score
-def filter_by_antutu_score():
+# Function to compare phones by Antutu Score
+def filter_by_antutu_score(soft_df):
     antutu_filter_comp_df = soft_df.groupby(["Sno", "Name"])["Performance"].sum().reset_index()
     st.subheader("Antutu Score Comparison")
     st.dataframe(antutu_filter_comp_df)
 
-    # Plot a bar chart
-    fig, ax = plt.subplots(figsize=(20, 6))
-    ax.bar(antutu_filter_comp_df["Name"], antutu_filter_comp_df["Performance"])
-    plt.xticks(rotation=90)
-    plt.xlabel("Name")
-    plt.ylabel("Performance")
-    fig.patch.set_facecolor('none')  # Set the figure background to transparent
-    ax.set_facecolor('none')
-    st.pyplot(fig)
+    # Create a bar chart using Plotly Express
+    fig = px.bar(antutu_filter_comp_df, x="Name", y="Performance", title="Antutu Score Comparison")
+    fig.update_xaxes(tickangle=90)
+    fig.update_xaxes(title="Name")
+    fig.update_yaxes(title="Performance")
+    
+    # Show the Plotly chart in Streamlit
+    st.plotly_chart(fig)
 
 # Function to compare phones by Battery Capacity
-def filter_by_battery():
+def filter_by_battery(soft_df):
     battery_filter_comp_df = soft_df.groupby(["Sno", "Name"])["Battery Capacity"].sum().reset_index()
     st.subheader("Battery Capacity Comparison")
     st.dataframe(battery_filter_comp_df)
 
-    # Plot a bar chart
-    fig, ax = plt.subplots()
-    ax.bar(battery_filter_comp_df["Name"], battery_filter_comp_df["Battery Capacity"])
-    plt.xticks(rotation=90)
-    plt.xlabel("Name")
-    plt.ylabel("Battery (mAh)")
-    st.pyplot(fig)
-
+    # Create a bar chart using Plotly Express
+    fig = px.bar(battery_filter_comp_df, x="Name", y="Battery Capacity", title="Battery Capacity Comparison")
+    fig.update_xaxes(tickangle=90)
+    fig.update_xaxes(title="Name")
+    fig.update_yaxes(title="Battery (mAh)")
+    
+    # Show the Plotly chart in Streamlit
+    st.plotly_chart(fig)
 # Function to compare phones by company
 def company_wise():
 # Add a new text input for the brand name
