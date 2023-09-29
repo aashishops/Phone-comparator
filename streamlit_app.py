@@ -51,7 +51,7 @@ def filter_by_battery():
     st.dataframe(battery_filter_comp_df)
 
     # Plot a bar chart
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(20, 6))
     ax.bar(battery_filter_comp_df["Name"], battery_filter_comp_df["Battery Capacity"])
     plt.xticks(rotation=90)
     plt.xlabel("Name")
