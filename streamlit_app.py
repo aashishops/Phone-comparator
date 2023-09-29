@@ -137,7 +137,7 @@ def compare_phones():
             ))
 
         fig.update_layout(
-            bgcolor="#494b5a",
+            
             polar=dict(
                 radialaxis=dict(
                     visible=True,
