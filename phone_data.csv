@@ -1,0 +1,54 @@
+Sno,Company,Name,Processor,Performance,Ram,Front Camera,Back Camera,UW Camera,Telephoto Cam,Screen Size,Battery Capacity,,,Cno
+1,Apple,IPhone X,A11 Bionic,304147,3,7,12,-,12,5.8,2716,,,123
+2,Apple,IPhone 8,A11 Bionic,269611,2,7,12,-,-,4.7,1821,,,123
+3,Apple,IPhone 8 plus,A11 Bionic,269611,3,7,12,-,12,5.5,2675,,,123
+4,Apple,IPhone 7,A10 Fusion,172567,2,7,12,-,-,4.7,1960,,,123
+5,Apple,IPhone 7 plus,A10 Fusion,172567,3,7,12,-,12,5.5,2900,,,123
+6,Apple,IPhone XS,A12 Bionic,539705,4,7,12,-,12,5.8,2659,,,123
+7,Apple,IPhone XR,A12 Bionic,520588,3,7,12,-,-,6.1,2942,,,123
+8,Apple,IPhone XS max,A12 Bionic,538382,4,7,12,-,12,6.4,3179,,,123
+9,Apple,IPhone 11,A13 Bionic,621759,4,12,12,12,-,6.1,3110,,,123
+10,Apple,IPhone 11 Pro,A13 Bionic,644421,4,12,12,12,12,5.8,3046,,,123
+11,Apple,IPhone 11 Pro Max,A13 Bionic,647538,4,12,12,12,12,6.5,3969,,,123
+12,Apple,IPhone SE 2,A13 Bionic,581212,3,7,12,-,-,4.7,1821,,,123
+13,Apple,IPhone 12,A14 Bionic,729162,4,12,12,12,-,6.1,2815,,,123
+14,Apple,iPhone 12 mini,A14 Bionic,710592,4,12,12,12,-,5.4,2227,,,123
+15,Apple,IPhone 12 Pro,A14 Bionic,727545,6,12,12,12,12,6.1,2815,,,123
+16,Apple,IPhone !2 Pro Max,A14 Bionic,751082,6,12,12,12,12,6.7,3687,,,123
+17,Apple,IPhone 13 Pro Max,A15 Bionic,842234,6,12,12,12,12,6.7,4352,,,123
+18,Apple,IPhone 13 Pro  ,A15 Bionic,833936,6,12,12,12,12,6.1,3095,,,123
+19,Apple,IPhone 13,A15 Bionic,814197,4,12,12,12,-,6.1,3227,,,123
+20,Apple,IPhone 13 mini,A15 Bionic,796380,4,12,12,12,-,5.4,2406,,,123
+21,Samsung,Samsung Galaxy S9,Snapdragon 845,250156,4,8,12,-,-,5.8,3000,,,223
+22,Samsung,Samsung Galaxy S9 plus,Snapdragon 845,248237,6,8,12,-,-,6.2,3500,,,223
+23,Samsung,Samsung Galaxy S10,Snapdragon 855,420140,8,10,12,16,12,6.1,3400,,,223
+24,Samsung,Samsung Galaxy s10 plus,Snapdragon 855,420140,8,10,12,16,12,6.4,4100,,,223
+25,Samsung,Samsung Galaxy S10e,Snapdragon 855,494897,6,10,12,16,-,5.8,,,,223
+26,Samsung,Samsung Galaxy S20,Snapdragon 865,513043,8,10,12,12,64,6.2,4000,,,223
+27,Samsung ,Samsung Galaxy S20 plus,Snapdragon 856,523976,8,10,12,12,64,6.7,4500,,,223
+28,Samsung ,Samsung Galaxy S20 Ultra,Snapdragon 865,511288,12,10,108,12,48,6.9,5000,,,223
+29,Samsung ,Samsung Galaxy S21 ,Snapdragon 888,646482,8,10,12,12,64,6.2,4000,,,223
+30,Samsung ,Samsung Galaxy S21 plus,Snapdragon 888,646482,8,10,12,12,64,6.7,4800,,,223
+31,Samsung ,Samsung Galaxy S21 Ultra,Snapdragon 888,649853,12,40,108,12,10,6.9,5000,,,223
+32,Oneplus ,Oneplus 6,Snapdragon 845,264200,6,16,16,-,16,6.3,3300,,,323
+33,Oneplus ,Oneplus 6T,Snapdragon 845,293994,6,16,16,-,16,6.4,3700,,,323
+34,Oneplus ,Oneplus 7,Snapdragon 855,367812,6,16,48,-,-,6.4,3700,,,323
+35,Oneplus ,Oneplus 7 Pro,Snapdragon 855,367949,6,16,48,16,8,6.7,4000,,,323
+36,Oneplus ,Oneplus 7T,Snapdragon 855+,391545,8,16,48,16,12,6.6,3800,,,323
+37,Oneplus ,Oneplus 7T Pro,Snapdragon 855+,393543,8,16,48,16,12,6.8,4085,,,323
+38,Oneplus,Oneplus 8,Snapdragon 865,564708,6,16,48,16,-,6.6,4300,,,323
+39,Oneplus ,Oneplus 8 Pro,Snapdragon 855,573276,8,16,48,48,8,6.8,4510,,,323
+40,Oneplus,Oneplus 8T,Snapdragon 865,586000,8,16,48,16,-,6.6,4500,,,323
+41,Oneplus,Oneplus 9,Snapdragon 888,712299,8,16,48,50,-,6.6,4500,,,323
+42,Oneplus ,Oneplus 9R,Snapdragon 888,700343,8,16,48,16,-,6.6,4500,,,323
+43,Oneplus ,Oneplus 9 Pro,Snapdragon 888,722343,8,16,48,50,8,6.7,4500,,,323
+44,Google ,Google Pixel 3,Snapdragon 845,285044,4,8,12,-,-,5.5,2915,,,423
+45,Google ,Google Pixel 3 XL,Snapdragon 845,258244,4,8,12,-,-,6.3,3430,,,423
+46,Google ,Google Pixel 3A,Snapdragon 670,160007,4,8,12,-,-,5.6,3000,,,423
+47,Google ,Google Pixel 4,Snapdragon 855,395351,6,8,12,-,16,5.7,2800,,,423
+48,Google ,Google Pixel 4 XL,Snapdragon 855,323305,6,8,12,-,16,6.3,3700,,,423
+49,Google ,Google Pixel 4A,Snapdragon 730G,268714,6,8,12,-,-,5.8,3140,,,423
+50,Google ,Google Pixel 5,Snapdragon 765G,314355,8,8,12,16,-,6,4080,,,423
+51,Google ,Google Pixel 5A,Snapdragon 765G,291303,6,8,12,16,-,6.3,4680,,,423
+52,Google ,Google Pixel 6,Google Tensor,676831,8,8,50,12,-,6.4,4614,,,423
+53,Google ,Google Pixel 6 Pro,Google Tensor,585485,12,11,50,12,48,6.7,5003,,,423
