@@ -143,8 +143,8 @@ def compare_phones():
                     range=[0, 1]
                 )),
             showlegend=True,
-            paper_bgcolor='black',  # Set the paper background to black
-            plot_bgcolor='black'
+            paper_bgcolor="rgba(0, 0, 0, 0)",  # Set the paper background to black
+            plot_bgcolor="rgba(0, 0, 0, 0)"
         )
     
         st.plotly_chart(fig)
