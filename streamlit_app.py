@@ -36,7 +36,7 @@ def filter_by_antutu_score():
     st.dataframe(antutu_filter_comp_df)
 
     # Plot a bar chart
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(12, 6))
     ax.bar(antutu_filter_comp_df["Name"], antutu_filter_comp_df["Performance"])
     plt.xticks(rotation=90)
     plt.xlabel("Name")
