@@ -144,7 +144,7 @@ def compare_phones():
                 )),
             showlegend=True
         )
-        fig.update_layout(paper_bgcolor='black', plot_bgcolor='black')
+        fig.update_traces(marker=dict(color='black', opacity=0.7), selector=dict(type='scatterpolar'))
         st.plotly_chart(fig)
 
 
