@@ -144,6 +144,7 @@ def compare_phones():
                 )),
             showlegend=True
         )
+        fig.update_layout(paper_bgcolor='black', plot_bgcolor='black')
         st.plotly_chart(fig)
 
 
