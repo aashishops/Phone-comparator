@@ -21,7 +21,34 @@ def load_data():
 soft_df = load_data()
 display_df = soft_df.groupby(["Sno", "Name", "Processor"])[["Ram", "Performance", "Battery Capacity"]].sum().reset_index()
 compare_df = soft_df.groupby(["Sno", "Name", "Processor"])[["Performance", "Battery Capacity", "Front Camera", "Back Camera", "Screen Size"]].sum().reset_index()
+footer_html = """
+<style>
+a:link, a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+}
 
+a:hover, a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+</style>
+<div class="footer">
+    <p>Developed with ❤ by <a href="https://www.heflin.dev/" target="_blank">Heflin Stephen Raj S</a></p>
+</div>
+"""
 
 # Sidebar
 st.sidebar.header("Phone Comparator")
@@ -151,8 +178,8 @@ def compare_phones():
         st.plotly_chart(fig)
 
 def add_footer():
-  
-    st.markdown("Made by [Aashish](https://aashish-sekar.netlify.app/) with 🖤")
+    st.text("")  # Add an empty spacer
+    st.markdown(footer_html, unsafe_allow_html=True)
     
 # Main menu options
 menu_option = st.sidebar.selectbox("Select an option:", ["Home", "Filter by Antutu Score", "Filter by Battery Capacity", "Company-wise Comparison", "Compare Phones"])
