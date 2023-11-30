@@ -41,8 +41,8 @@ a:hover, a:active {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: transparent;
-    color: #0E1117;
+    background-color: #0E1117;
+    color: white;
     text-align: right;
 }
 </style>
