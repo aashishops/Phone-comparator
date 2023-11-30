@@ -156,15 +156,20 @@ menu_option = st.sidebar.selectbox("Select an option:", ["Home", "Filter by Antu
 
 if menu_option == "Home":
     st.write("Welcome to the Phone Comparator App! Choose an option from the sidebar.")
-
+    add_footer()
 elif menu_option == "Filter by Antutu Score":
     filter_by_antutu_score()
-
+    add_footer()
 elif menu_option == "Filter by Battery Capacity":
     filter_by_battery()
-
+    add_footer()
 elif menu_option == "Company-wise Comparison":
     company_wise()
-
+    add_footer()
 elif menu_option == "Compare Phones":
     compare_phones()
+    add_footer()
+    
+def add_footer():
+    st.markdown("---")
+    st.write("Made by Aashish | [GitHub](https://github.com/aashishops)")
