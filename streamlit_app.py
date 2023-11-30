@@ -48,7 +48,7 @@ a:hover, a:active {
 <div class="footer">
     <p>Developed with ❤ by <a href="https://aashish-sekar.netlify.app/" target="_blank">Aashish</a></p>
 </div>
-"""/
+"""
 
 # Sidebar
 st.sidebar.header("Phone Comparator")
