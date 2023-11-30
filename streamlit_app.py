@@ -175,6 +175,7 @@ menu_option = st.sidebar.selectbox("Select an option:", ["Home", "Filter by Antu
 
 if menu_option == "Home":
     st.write("Welcome to the Phone Comparator App! Choose an option from the sidebar.")
+    st.write("This was a School Project done when i was in 12th grade")
     add_footer()
 elif menu_option == "Filter by Antutu Score":
     filter_by_antutu_score()
