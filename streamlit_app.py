@@ -21,6 +21,7 @@ def load_data():
 soft_df = load_data()
 display_df = soft_df.groupby(["Sno", "Name", "Processor"])[["Ram", "Performance", "Battery Capacity"]].sum().reset_index()
 compare_df = soft_df.groupby(["Sno", "Name", "Processor"])[["Performance", "Battery Capacity", "Front Camera", "Back Camera", "Screen Size"]].sum().reset_index()
+
 footer_html = """
 <style>
 a:link, a:visited {
@@ -48,7 +49,7 @@ a:hover, a:active {
 <div class="footer">
     <p>Developed with ❤ by <a href="https://aashish-sekar.netlify.app/" target="_blank">Aashish</a></p>
 </div>
-"""
+"""/
 
 # Sidebar
 st.sidebar.header("Phone Comparator")
