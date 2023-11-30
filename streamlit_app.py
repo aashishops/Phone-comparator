@@ -152,14 +152,14 @@ def compare_phones():
 
 def add_footer():
     st.markdown("---")
-    st.write("Made by Aashish | [GitHub](https://github.com/aashishops)")
+    st.write("Made by [Aashish](https://aashish-sekar.netlify.app/)")
     
 # Main menu options
 menu_option = st.sidebar.selectbox("Select an option:", ["Home", "Filter by Antutu Score", "Filter by Battery Capacity", "Company-wise Comparison", "Compare Phones"])
 
 if menu_option == "Home":
     st.write("Welcome to the Phone Comparator App! Choose an option from the sidebar.")
-    add_footer()
+    
 elif menu_option == "Filter by Antutu Score":
     filter_by_antutu_score()
     add_footer()
