@@ -17,7 +17,6 @@ plt.style.use('dark_background')
 def load_data():
     return pd.read_csv("phone_data.csv")
 
-
 soft_df = load_data()
 display_df = soft_df.groupby(["Sno", "Name", "Processor"])[["Ram", "Performance", "Battery Capacity"]].sum().reset_index()
 compare_df = soft_df.groupby(["Sno", "Name", "Processor"])[["Performance", "Battery Capacity", "Front Camera", "Back Camera", "Screen Size"]].sum().reset_index()
@@ -41,13 +40,13 @@ a:hover, a:active {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #0E1117;
-    color: white;
-    text-align: right;
+    background-color: white;
+    color: black;
+    text-align: center;
 }
 </style>
 <div class="footer">
-    <p>Developed with ❤ by <a href="https://aashish-sekar.netlify.app/" target="_blank">Aashish</a></p>
+    <p>Developed with ❤ by <a href="https://www.heflin.dev/" target="_blank">Heflin Stephen Raj S</a></p>
 </div>
 """
 
@@ -58,7 +57,6 @@ st.sidebar.header("Phone Comparator")
 st.title("Phone Comparator App")
 
 # Function to compare phones by Antutu score
-# Function to compare phones by Antutu Score
 def filter_by_antutu_score():
     antutu_filter_comp_df = soft_df.groupby(["Sno", "Name"])["Performance"].sum().reset_index()
     st.subheader("Antutu Score Comparison")
@@ -84,53 +82,55 @@ def filter_by_battery():
     plt.xticks(rotation=90)
     plt.xlabel("Name")
     plt.ylabel("Battery (mAh)")
-    st.pyplot(fig)# Function to compare phones by company
+    st.pyplot(fig)
+
+# Function to compare phones by company
 def company_wise():
-# Add a new text input for the brand name
-        brand = st.text_input("Enter the company name you want to compare (e.g., Apple, Samsung, OnePlus, Google):")
+    # Add a new text input for the brand name
+    brand = st.text_input("Enter the company name you want to compare (e.g., Apple, Samsung, OnePlus, Google):")
 
-        # Add a button to trigger the comparison
-        if st.button("Compare"):
-            # Check if the brand input is not empty
-            if brand:
-                brand = brand.lower()
-                
-                # Filter data based on the entered company name
-                filtered_df = soft_df[soft_df["Company"].str.lower().str.contains(brand)]
+    # Add a button to trigger the comparison
+    if st.button("Compare"):
+        # Check if the brand input is not empty
+        if brand:
+            brand = brand.lower()
 
-                if not filtered_df.empty:
-                    filtered_df = filtered_df.iloc[:, :-3]
-                    st.subheader(f"Comparison for {brand.capitalize()} Phones")
-                    st.dataframe(filtered_df)
+            # Filter data based on the entered company name
+            filtered_df = soft_df[soft_df["Company"].str.lower().str.contains(brand)]
 
-                    # Create a bar chart for comparison
-                    num_cols = filtered_df.select_dtypes(exclude=[object]).columns
-                    df_grouped = filtered_df.groupby(["Name"])[num_cols].sum().round(1).reset_index()
+            if not filtered_df.empty:
+                filtered_df = filtered_df.iloc[:, :-3]
+                st.subheader(f"Comparison for {brand.capitalize()} Phones")
+                st.dataframe(filtered_df)
 
-                    fig = make_subplots(rows=4, cols=4,
-                                        shared_xaxes=False,
-                                        vertical_spacing=0.1,
-                                        subplot_titles=num_cols)
+                # Create a bar chart for comparison
+                num_cols = filtered_df.select_dtypes(exclude=[object]).columns
+                df_grouped = filtered_df.groupby(["Name"])[num_cols].sum().round(1).reset_index()
 
-                    i = j = 1
-                    for col in num_cols:
-                        fig.add_trace(go.Bar(x=df_grouped["Name"],
-                                            y=df_grouped[col],
-                                            text=df_grouped[col],
-                                            textposition="inside",
-                                            name=col), row=i, col=j)
-                        j += 1
-                        if j > 4:
-                            j = 1
-                            i += 1
-                        if i > 4:
-                            i = 1
+                fig = make_subplots(rows=4, cols=4,
+                                    shared_xaxes=False,
+                                    vertical_spacing=0.1,
+                                    subplot_titles=num_cols)
 
-                    fig.update_layout(height=2000, width=1500)
-                    st.plotly_chart(fig)
-                else:
-                    st.error(f"No data available for {brand.capitalize()} phones.")
-    
+                i = j = 1
+                for col in num_cols:
+                    fig.add_trace(go.Bar(x=df_grouped["Name"],
+                                        y=df_grouped[col],
+                                        text=df_grouped[col],
+                                        textposition="inside",
+                                        name=col), row=i, col=j)
+                    j += 1
+                    if j > 4:
+                        j = 1
+                        i += 1
+                    if i > 4:
+                        i = 1
+
+                fig.update_layout(height=2000, width=1500)
+                st.plotly_chart(fig)
+            else:
+                st.error(f"No data available for {brand.capitalize()} phones.")
+
 # Function to compare phones individually
 def compare_phones():
     num_comparisons = st.selectbox("How many phones do you want to compare (Min: 1, Max: 5)?", [1, 2, 3, 4, 5], index=0)
@@ -150,7 +150,7 @@ def compare_phones():
         phones_to_compare = phones_to_compare.set_index("Name")
         cols_for_radar = phones_to_compare[["Performance", "Battery Capacity", "Front Camera", "Back Camera", "Screen Size"]]
 
-        # Normalize the data for radar chart
+        # Normalize the data for the radar chart
         max_vals = cols_for_radar.max()
         radar_data = cols_for_radar / max_vals
 
@@ -165,7 +165,6 @@ def compare_phones():
             ))
 
         fig.update_layout(
-            
             polar=dict(
                 radialaxis=dict(
                     visible=True,
@@ -175,30 +174,31 @@ def compare_phones():
             paper_bgcolor="rgba(0, 0, 0, 0)",  # Set the paper background to black
             plot_bgcolor="rgba(0, 0, 0, 0)"
         )
-    
+
         st.plotly_chart(fig)
 
 def add_footer():
     st.text("")  # Add an empty spacer
     st.markdown(footer_html, unsafe_allow_html=True)
-    
+
 # Main menu options
 menu_option = st.sidebar.selectbox("Select an option:", ["Home", "Filter by Antutu Score", "Filter by Battery Capacity", "Company-wise Comparison", "Compare Phones"])
 
 if menu_option == "Home":
     st.write("Welcome to the Phone Comparator App! Choose an option from the sidebar.")
-    
+
 elif menu_option == "Filter by Antutu Score":
     filter_by_antutu_score()
     add_footer()
+
 elif menu_option == "Filter by Battery Capacity":
     filter_by_battery()
     add_footer()
+
 elif menu_option == "Company-wise Comparison":
     company_wise()
     add_footer()
+
 elif menu_option == "Compare Phones":
     compare_phones()
     add_footer()
-    
-
