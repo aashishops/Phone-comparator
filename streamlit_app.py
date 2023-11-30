@@ -150,7 +150,10 @@ def compare_phones():
     
         st.plotly_chart(fig)
 
-
+def add_footer():
+    st.markdown("---")
+    st.write("Made by Aashish | [GitHub](https://github.com/aashishops)")
+    
 # Main menu options
 menu_option = st.sidebar.selectbox("Select an option:", ["Home", "Filter by Antutu Score", "Filter by Battery Capacity", "Company-wise Comparison", "Compare Phones"])
 
@@ -170,6 +173,4 @@ elif menu_option == "Compare Phones":
     compare_phones()
     add_footer()
     
-def add_footer():
-    st.markdown("---")
-    st.write("Made by Aashish | [GitHub](https://github.com/aashishops)")
+
