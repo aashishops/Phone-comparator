@@ -24,13 +24,13 @@ compare_df = soft_df.groupby(["Sno", "Name", "Processor"])[["Performance", "Batt
 footer_html = """
 <style>
 a:link, a:visited {
-    color: blue;
+ 
     background-color: transparent;
     text-decoration: underline;
 }
 
 a:hover, a:active {
-    color: red;
+    
     background-color: transparent;
     text-decoration: underline;
 }
@@ -40,7 +40,7 @@ a:hover, a:active {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    background-color: transparent;
     color: black;
     text-align: center;
 }
