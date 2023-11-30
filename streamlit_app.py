@@ -23,30 +23,19 @@ compare_df = soft_df.groupby(["Sno", "Name", "Processor"])[["Performance", "Batt
 
 footer_html = """
 <style>
-a:link, a:visited {
-    color: blue;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-a:hover, a:active {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-}
 
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: #0E1117;
+    color: white;
     text-align: center;
 }
 </style>
 <div class="footer">
-    <p>Developed with ❤ by <a href="https://www.heflin.dev/" target="_blank">Heflin Stephen Raj S</a></p>
+    <p>Developed with ❤ by <a href="https://aashish-sekar.netlify.app/" target="_blank">Aashish</a></p>
 </div>
 """
 
@@ -186,7 +175,7 @@ menu_option = st.sidebar.selectbox("Select an option:", ["Home", "Filter by Antu
 
 if menu_option == "Home":
     st.write("Welcome to the Phone Comparator App! Choose an option from the sidebar.")
-
+    add_footer()
 elif menu_option == "Filter by Antutu Score":
     filter_by_antutu_score()
     add_footer()
